@@ -96,6 +96,18 @@
 
         document.getElementById('unit-converter-form').addEventListener('submit', function(event) {
             event.preventDefault();
+
+            const inputValue = document.getElementById('input-value').value;
+            const inputUnit = document.getElementById('input-unit').value;
+            const outputUnit = document.getElementById('output-unit').value;
+
+            fetch(`/convert?value=${inputValue}&input_unit=${inputUnit}&output_unit=${outputUnit}`)
+                .then(response => response.json())
+                .then(data => {
+                    const result = data.result;
+                    document.getElementById('result').textContent = `${inputValue} ${inputUnit} is equal to ${result} ${outputUnit}`;
+                })
+                .catch(error => console.error('Error converting units:', error));
             // Add your JavaScript code here to handle the conversion
         });
 

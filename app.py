@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from utils.convert import convert
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -23,3 +24,7 @@ def listTemperatureUnits():
 @app.get("/units/weight", response_class=JSONResponse)
 def listWeightUnits():
     return {"units": ["Kilogram", "Gram", "Milligram", "Microgram", "Ton", "Pound", "Ounce", "Carat"]}
+
+@app.get("/convert", response_class=JSONResponse)
+def convert_units(value: float, input_unit: str, output_unit: str):
+    return {"result": convert(value, input_unit, output_unit)}
