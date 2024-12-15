@@ -27,7 +27,7 @@ uvicorn app:app --reload
 #### 4. Open the website
 Open your browser and go to `http://localhost:8000`
 
-![demo](demo.png)
+![Demo](demo.png)
 
 **Example: Convert 1 kilometer to meter**
-![kilometer-to-meter](1kilometertometer.png)
+![1kilometertometer](1kilometertometer.png)
