@@ -11,6 +11,11 @@
     <button id="length-button" onclick="setLengthUnits()">Length</button>
     <button id="weight-button" onclick="setWeightUnits()">Weight</button>
     <button id="temperature-button" onclick="setTemperatureUnits()">Temperature</button>
+    <button id="speed-button" onclick="setSpeedUnits()">Speed</button>
+    <button id="volume-button" onclick="setVolumeUnits()">Volume</button>
+    <button id="area-button" onclick="setAreaUnits()">Area</button>
+    <button id="time-button" onclick="setTimeUnits()">Time</button>
+    <button id="digital-storage-button" onclick="setDigitalStorageUnits()">Digital Storage</button>
 
     <form id="unit-converter-form">
         <label for="input-value">Value:</label>
@@ -74,6 +79,76 @@
             populateUnits(temperatureUnits);
         }
 
+        function setSpeedUnits() {
+            setActiveButton('speed-button');
+            fetch('/units/speed')
+                .then(response => response.json())
+                .then(data => {
+                    const speedUnits = data.units;
+                    populateUnits(speedUnits);
+                })
+                .catch(error => console.error('Error fetching speed units:', error));
+
+            const speedUnits = ['Meters per second', 'Kilometers per hour', 'Miles per hour'];
+            populateUnits(speedUnits);
+        }
+
+        function setVolumeUnits() {
+            setActiveButton('volume-button');
+            fetch('/units/volume')
+                .then(response => response.json())
+                .then(data => {
+                    const volumeUnits = data.units;
+                    populateUnits(volumeUnits);
+                })
+                .catch(error => console.error('Error fetching volume units:', error));
+
+            const volumeUnits = ['Milliliters', 'Liters', 'Cubic meters', 'Cubic feet'];
+            populateUnits(volumeUnits);
+        }
+
+        function setAreaUnits() {
+            setActiveButton('area-button');
+            fetch('/units/area')
+                .then(response => response.json())
+                .then(data => {
+                    const areaUnits = data.units;
+                    populateUnits(areaUnits);
+                })
+                .catch(error => console.error('Error fetching area units:', error));
+
+            const areaUnits = ['Square meters', 'Square kilometers', 'Square feet', 'Square miles'];
+            populateUnits(areaUnits);
+        }
+
+        function setTimeUnits() {
+            setActiveButton('time-button');
+            fetch('/units/time')
+                .then(response => response.json())
+                .then(data => {
+                    const timeUnits = data.units;
+                    populateUnits(timeUnits);
+                })
+                .catch(error => console.error('Error fetching time units:', error));
+
+            const timeUnits = ['Seconds', 'Minutes', 'Hours', 'Days'];
+            populateUnits(timeUnits);
+        }
+
+        function setDigitalStorageUnits() {
+            setActiveButton('digital-storage-button');
+            fetch('/units/digitalstorage')
+                .then(response => response.json())
+                .then(data => {
+                    const digitalStorageUnits = data.units;
+                    populateUnits(digitalStorageUnits);
+                })
+                .catch(error => console.error('Error fetching digital storage units:', error));
+
+            const digitalStorageUnits = ['Bits', 'Bytes', 'Kilobits', 'Kilobytes', 'Megabits', 'Megabytes', 'Gigabits', 'Gigabytes'];
+            populateUnits(digitalStorageUnits);
+        }
+
         function populateUnits(units) {
             const inputUnitSelect = document.getElementById('input-unit');
             const outputUnitSelect = document.getElementById('output-unit');
@@ -108,7 +183,6 @@
                     document.getElementById('result').textContent = `${inputValue} ${inputUnit} is equal to ${result} ${outputUnit}`;
                 })
                 .catch(error => console.error('Error converting units:', error));
-            // Add your JavaScript code here to handle the conversion
         });
 
         // Set default units to length units on page load

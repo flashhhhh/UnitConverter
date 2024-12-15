@@ -15,7 +15,6 @@ for index, row in conversion_table.iterrows():
 g.build()
 
 def listLengthUnits():
-    # List all distinct units (2 columns from and to) in the conversion table for length
     from_units = set(conversion_table[conversion_table['conversion_type'] == 'Length']['from'].unique())
     to_units = set(conversion_table[conversion_table['conversion_type'] == 'Length']['to'].unique())
     units = sorted(set(from_units.union(to_units)))
@@ -23,7 +22,6 @@ def listLengthUnits():
     return {"units": list(units)}
 
 def listTemperatureUnits():
-    # List all distinct units (2 columns from and to) in the conversion table for temperature
     from_units = set(conversion_table[conversion_table['conversion_type'] == 'Temperature']['from'].unique())
     to_units = set(conversion_table[conversion_table['conversion_type'] == 'Temperature']['to'].unique())
     units = sorted(set(from_units.union(to_units)))
@@ -31,9 +29,43 @@ def listTemperatureUnits():
     return {"units": list(units)}
 
 def listWeightUnits():
-    # List all distinct units (2 columns from and to) in the conversion table for weight
     from_units = set(conversion_table[conversion_table['conversion_type'] == 'Weight']['from'].unique())
     to_units = set(conversion_table[conversion_table['conversion_type'] == 'Weight']['to'].unique())
+    units = sorted(set(from_units.union(to_units)))
+
+    return {"units": list(units)}
+
+def listSpeedUnits():
+    from_units = set(conversion_table[conversion_table['conversion_type'] == 'Speed']['from'].unique())
+    to_units = set(conversion_table[conversion_table['conversion_type'] == 'Speed']['to'].unique())
+    units = sorted(set(from_units.union(to_units)))
+
+    return {"units": list(units)}
+
+def listVolumeUnits():
+    from_units = set(conversion_table[conversion_table['conversion_type'] == 'Volume']['from'].unique())
+    to_units = set(conversion_table[conversion_table['conversion_type'] == 'Volume']['to'].unique())
+    units = sorted(set(from_units.union(to_units)))
+
+    return {"units": list(units)}
+
+def listAreaUnits():
+    from_units = set(conversion_table[conversion_table['conversion_type'] == 'Area']['from'].unique())
+    to_units = set(conversion_table[conversion_table['conversion_type'] == 'Area']['to'].unique())
+    units = sorted(set(from_units.union(to_units)))
+
+    return {"units": list(units)}
+
+def listTimeUnits():
+    from_units = set(conversion_table[conversion_table['conversion_type'] == 'Time']['from'].unique())
+    to_units = set(conversion_table[conversion_table['conversion_type'] == 'Time']['to'].unique())
+    units = sorted(set(from_units.union(to_units)))
+
+    return {"units": list(units)}
+
+def listDigitalStorageUnits():
+    from_units = set(conversion_table[conversion_table['conversion_type'] == 'Digital Storage']['from'].unique())
+    to_units = set(conversion_table[conversion_table['conversion_type'] == 'Digital Storage']['to'].unique())
     units = sorted(set(from_units.union(to_units)))
 
     return {"units": list(units)}
