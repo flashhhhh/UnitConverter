@@ -14,6 +14,9 @@ class Graph():
         self.cost = []
     
     def add_edge(self, u: str, v: str, w: float):
+        u = u.lower()
+        v = v.lower()
+
         if u not in self.dictionary:
             self.dictionary[u] = len(self.dictionary)
         if v not in self.dictionary:
@@ -42,6 +45,9 @@ class Graph():
                         q.append(v)
     
     def query(self, u: str, v: str) -> float:
+        u = u.lower()
+        v = v.lower()
+
         if u not in self.dictionary or v not in self.dictionary:
             return -1.0
         
