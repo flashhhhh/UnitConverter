@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+</head>
+<body>
+    <h1>Unit Converter</h1>
+    <button onclick="setLengthUnits()">Length</button>
+    <button onclick="setWeightUnits()">Weight</button>
+    <button onclick="setTemperatureUnits()">Temperature</button>
+
+    <form id="unit-converter-form">
+        <label for="input-value">Value:</label>
+        <input type="number" id="input-value" name="input-value" required>
+
+        <label for="input-unit">From:</label>
+        <select id="input-unit" name="input-unit">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+
+        <label for="output-unit">To:</label>
+        <select id="output-unit" name="output-unit">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function setLengthUnits() {
+            const lengthUnits = ['Meters', 'Kilometers', 'Centimeters', 'Millimeters'];
+            populateUnits(lengthUnits);
+        }
+
+        function setWeightUnits() {
+            const weightUnits = ['Grams', 'Kilograms', 'Pounds', 'Ounces'];
+            populateUnits(weightUnits);
+        }
+
+        function setTemperatureUnits() {
+            const temperatureUnits = ['Celsius', 'Fahrenheit', 'Kelvin'];
+            populateUnits(temperatureUnits);
+        }
+
+        function populateUnits(units) {
+            const inputUnitSelect = document.getElementById('input-unit');
+            const outputUnitSelect = document.getElementById('output-unit');
+            inputUnitSelect.innerHTML = '';
+            outputUnitSelect.innerHTML = '';
+            units.forEach(unit => {
+                const option = document.createElement('option');
+                option.value = unit.toLowerCase();
+                option.textContent = unit;
+                inputUnitSelect.appendChild(option);
+                outputUnitSelect.appendChild(option.cloneNode(true));
+            });
+        }
+
+        document.getElementById('unit-converter-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your JavaScript code here to handle the conversion
+        });
+
+        // Set default units to length units on page load
+        setLengthUnits();
+    </script>
+</body>
+</html>
