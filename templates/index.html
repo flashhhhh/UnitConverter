@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Unit Converter</h1>
-    <button onclick="setLengthUnits()">Length</button>
-    <button onclick="setWeightUnits()">Weight</button>
-    <button onclick="setTemperatureUnits()">Temperature</button>
+    <button id="length-button" onclick="setLengthUnits()">Length</button>
+    <button id="weight-button" onclick="setWeightUnits()">Weight</button>
+    <button id="temperature-button" onclick="setTemperatureUnits()">Temperature</button>
 
     <form id="unit-converter-form">
         <label for="input-value">Value:</label>
@@ -32,16 +33,43 @@
 
     <script>
         function setLengthUnits() {
-            const lengthUnits = ['Meters', 'Kilometers', 'Centimeters', 'Millimeters'];
+            setActiveButton('length-button');
+            fetch('/units/length')
+                .then(response => response.json())
+                .then(data => {
+                    const lengthUnits = data.units;
+                    populateUnits(lengthUnits);
+                })
+                .catch(error => console.error('Error fetching length units:', error));
+            
+            const lengthUnits = ['Meters', 'Kilometers', 'Feet', 'Inches'];
             populateUnits(lengthUnits);
         }
 
         function setWeightUnits() {
+            setActiveButton('weight-button');
+            fetch('/units/weight')
+                .then(response => response.json())
+                .then(data => {
+                    const weightUnits = data.units;
+                    populateUnits(weightUnits);
+                })
+                .catch(error => console.error('Error fetching temperature units:', error));
+
             const weightUnits = ['Grams', 'Kilograms', 'Pounds', 'Ounces'];
             populateUnits(weightUnits);
         }
 
         function setTemperatureUnits() {
+            setActiveButton('temperature-button');
+            fetch('/units/temperature')
+                .then(response => response.json())
+                .then(data => {
+                    const temperatureUnits = data.units;
+                    populateUnits(temperatureUnits);
+                })
+                .catch(error => console.error('Error fetching temperature units:', error));
+
             const temperatureUnits = ['Celsius', 'Fahrenheit', 'Kelvin'];
             populateUnits(temperatureUnits);
         }
@@ -58,6 +86,12 @@
                 inputUnitSelect.appendChild(option);
                 outputUnitSelect.appendChild(option.cloneNode(true));
             });
+        }
+
+        function setActiveButton(buttonId) {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => button.classList.remove('bold'));
+            document.getElementById(buttonId).classList.add('bold');
         }
 
         document.getElementById('unit-converter-form').addEventListener('submit', function(event) {
