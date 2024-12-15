@@ -70,95 +70,95 @@ Length,Nautical mile,Millimeter,1.852e+6
 Length,Nautical mile,Mile,1.15078
 Length,Nautical mile,Yard,2025.37
 Length,Nautical mile,Foot,6076.12
-Mass,Metric ton,Kilogram,1000
-Mass,Metric ton,Gram,1e+6
-Mass,Metric ton,Milligram,1e+9
-Mass,Metric ton,Mcg,1e+12
-Mass,Metric ton,Long ton,0.984207
-Mass,Metric ton,Short ton,1.10231
-Mass,Metric ton,Stone,157.473
-Mass,Metric ton,Pound,2204.62
-Mass,Metric ton,Ounce,35274
-Mass,Kilogram,Metric ton,0.001
-Mass,Kilogram,Gram,1000
-Mass,Kilogram,Milligram,1e+6
-Mass,Kilogram,Mcg,1e+9
-Mass,Kilogram,Long ton,0.000984207
-Mass,Kilogram,Short ton,0.00110231
-Mass,Kilogram,Stone,0.157473
-Mass,Kilogram,Pound,2.20462
-Mass,Kilogram,Ounce,35.274
-Mass,Gram,Metric ton,1e-6
-Mass,Gram,Kilogram,0.001
-Mass,Gram,Milligram,1000
-Mass,Gram,Mcg,1e+6
-Mass,Gram,Long ton,9.8421e-7
-Mass,Gram,Short ton,1.1023e-6
-Mass,Gram,Stone,0.000157473
-Mass,Gram,Pound,0.00220462
-Mass,Gram,Ounce,0.035274
-Mass,Milligram,Metric ton,1e-9
-Mass,Milligram,Kilogram,1e-6
-Mass,Milligram,Gram,0.001
-Mass,Milligram,Mcg,1000
-Mass,Milligram,Long ton,9.8421e-10
-Mass,Milligram,Short ton,1.1023e-9
-Mass,Milligram,Stone,1.5747e-7
-Mass,Milligram,Pound,2.2046e-6
-Mass,Milligram,Ounce,3.5274e-5
-Mass,Mcg,Metric ton,1e-12
-Mass,Mcg,Kilogram,1e-9
-Mass,Mcg,Gram,1e-6
-Mass,Mcg,Milligram,0.001
-Mass,Mcg,Long ton,9.8421e-13
-Mass,Mcg,Short ton,1.1023e-12
-Mass,Mcg,Stone,1.5747e-10
-Mass,Mcg,Pound,2.2046e-9
-Mass,Mcg,Ounce,3.5274e-8
-Mass,Long ton,Metric ton,1.01605
-Mass,Long ton,Kilogram,1016.05
-Mass,Long ton,Gram,1.016e+6
-Mass,Long ton,Milligram,1.016e+9
-Mass,Long ton,Mcg,1.016e+12
-Mass,Long ton,Short ton,1.12
-Mass,Long ton,Stone,160
-Mass,Long ton,Pound,2240
-Mass,Long ton,Ounce,35840
-Mass,Short ton,Metric ton,0.907185
-Mass,Short ton,Kilogram,907.185
-Mass,Short ton,Gram,907185
-Mass,Short ton,Milligram,9.072e+8
-Mass,Short ton,Mcg,9.072e+11
-Mass,Short ton,Long ton,0.892857
-Mass,Short ton,Stone,142.857
-Mass,Short ton,Pound,2000
-Mass,Short ton,Ounce,32000
-Mass,Stone,Metric ton,0.00635029
-Mass,Stone,Kilogram,6.35029
-Mass,Stone,Gram,6350.29
-Mass,Stone,Milligram,6.35e+6
-Mass,Stone,Mcg,6.35e+9
-Mass,Stone,Long ton,0.00625
-Mass,Stone,Short ton,0.007
-Mass,Stone,Pound,14
-Mass,Stone,Ounce,224
-Mass,Pound,Metric ton,0.000453592
-Mass,Pound,Kilogram,0.453592
-Mass,Pound,Gram,453.592
-Mass,Pound,Milligram,453592
-Mass,Pound,Mcg,4.536e+8
-Mass,Pound,Long ton,0.000446429
-Mass,Pound,Short ton,0.0005
-Mass,Pound,Stone,0.0714286
-Mass,Pound,Ounce,16
-Mass,Ounce,Pound,0.0625
-Mass,Ounce,Kilogram,0.0283495
-Mass,Ounce,Gram,28.3495
-Mass,Ounce,Milligram,28349.5
-Mass,Ounce,Mcg,2.835e+7
-Mass,Ounce,Long ton,2.7902e-5
-Mass,Ounce,Short ton,3.125e-5
-Mass,Ounce,Stone,0.00446429
+Weight,Metric ton,Kilogram,1000
+Weight,Metric ton,Gram,1e+6
+Weight,Metric ton,Milligram,1e+9
+Weight,Metric ton,Mcg,1e+12
+Weight,Metric ton,Long ton,0.984207
+Weight,Metric ton,Short ton,1.10231
+Weight,Metric ton,Stone,157.473
+Weight,Metric ton,Pound,2204.62
+Weight,Metric ton,Ounce,35274
+Weight,Kilogram,Metric ton,0.001
+Weight,Kilogram,Gram,1000
+Weight,Kilogram,Milligram,1e+6
+Weight,Kilogram,Mcg,1e+9
+Weight,Kilogram,Long ton,0.000984207
+Weight,Kilogram,Short ton,0.00110231
+Weight,Kilogram,Stone,0.157473
+Weight,Kilogram,Pound,2.20462
+Weight,Kilogram,Ounce,35.274
+Weight,Gram,Metric ton,1e-6
+Weight,Gram,Kilogram,0.001
+Weight,Gram,Milligram,1000
+Weight,Gram,Mcg,1e+6
+Weight,Gram,Long ton,9.8421e-7
+Weight,Gram,Short ton,1.1023e-6
+Weight,Gram,Stone,0.000157473
+Weight,Gram,Pound,0.00220462
+Weight,Gram,Ounce,0.035274
+Weight,Milligram,Metric ton,1e-9
+Weight,Milligram,Kilogram,1e-6
+Weight,Milligram,Gram,0.001
+Weight,Milligram,Mcg,1000
+Weight,Milligram,Long ton,9.8421e-10
+Weight,Milligram,Short ton,1.1023e-9
+Weight,Milligram,Stone,1.5747e-7
+Weight,Milligram,Pound,2.2046e-6
+Weight,Milligram,Ounce,3.5274e-5
+Weight,Mcg,Metric ton,1e-12
+Weight,Mcg,Kilogram,1e-9
+Weight,Mcg,Gram,1e-6
+Weight,Mcg,Milligram,0.001
+Weight,Mcg,Long ton,9.8421e-13
+Weight,Mcg,Short ton,1.1023e-12
+Weight,Mcg,Stone,1.5747e-10
+Weight,Mcg,Pound,2.2046e-9
+Weight,Mcg,Ounce,3.5274e-8
+Weight,Long ton,Metric ton,1.01605
+Weight,Long ton,Kilogram,1016.05
+Weight,Long ton,Gram,1.016e+6
+Weight,Long ton,Milligram,1.016e+9
+Weight,Long ton,Mcg,1.016e+12
+Weight,Long ton,Short ton,1.12
+Weight,Long ton,Stone,160
+Weight,Long ton,Pound,2240
+Weight,Long ton,Ounce,35840
+Weight,Short ton,Metric ton,0.907185
+Weight,Short ton,Kilogram,907.185
+Weight,Short ton,Gram,907185
+Weight,Short ton,Milligram,9.072e+8
+Weight,Short ton,Mcg,9.072e+11
+Weight,Short ton,Long ton,0.892857
+Weight,Short ton,Stone,142.857
+Weight,Short ton,Pound,2000
+Weight,Short ton,Ounce,32000
+Weight,Stone,Metric ton,0.00635029
+Weight,Stone,Kilogram,6.35029
+Weight,Stone,Gram,6350.29
+Weight,Stone,Milligram,6.35e+6
+Weight,Stone,Mcg,6.35e+9
+Weight,Stone,Long ton,0.00625
+Weight,Stone,Short ton,0.007
+Weight,Stone,Pound,14
+Weight,Stone,Ounce,224
+Weight,Pound,Metric ton,0.000453592
+Weight,Pound,Kilogram,0.453592
+Weight,Pound,Gram,453.592
+Weight,Pound,Milligram,453592
+Weight,Pound,Mcg,4.536e+8
+Weight,Pound,Long ton,0.000446429
+Weight,Pound,Short ton,0.0005
+Weight,Pound,Stone,0.0714286
+Weight,Pound,Ounce,16
+Weight,Ounce,Pound,0.0625
+Weight,Ounce,Kilogram,0.0283495
+Weight,Ounce,Gram,28.3495
+Weight,Ounce,Milligram,28349.5
+Weight,Ounce,Mcg,2.835e+7
+Weight,Ounce,Long ton,2.7902e-5
+Weight,Ounce,Short ton,3.125e-5
+Weight,Ounce,Stone,0.00446429
 Speed,Miles/hour,Feet/sec,1.46667
 Speed,Miles/hour,Meters/sec,0.44704
 Speed,Miles/hour,Km/hour,1.60934
