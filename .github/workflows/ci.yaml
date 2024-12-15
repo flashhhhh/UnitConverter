@@ -28,4 +28,4 @@ jobs:
     
     - name: Run the webserver
       run: |
-        uvicorn main:app --reload
+        uvicorn app:app --reload --port 8000
